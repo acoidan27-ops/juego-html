@@ -1,14 +1,24 @@
 :root {
+<<<<<<< codex/create-complete-2d-platformer-web-game-6hnqgd
   --text: #eaf0ff;
   --panel: rgba(11, 18, 34, 0.74);
   --panel-border: rgba(140, 181, 255, 0.26);
   --accent: #5ec5ff;
+=======
+  --bg-dark: #0f172a;
+  --bg-mid: #1e293b;
+  --accent: #60a5fa;
+  --accent-2: #34d399;
+  --danger: #f87171;
+  --text: #e2e8f0;
+>>>>>>> main
 }
 
 * {
   box-sizing: border-box;
 }
 
+<<<<<<< codex/create-complete-2d-platformer-web-game-6hnqgd
 html,
 body {
   touch-action: none;
@@ -35,10 +45,28 @@ body {
   width: min(1120px, 100%);
   display: grid;
   gap: 0.7rem;
+=======
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top, #1d4ed8 0%, #0f172a 55%, #020617 100%);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.game-shell {
+  width: min(1100px, 100%);
+  display: grid;
+  gap: 0.8rem;
+>>>>>>> main
 }
 
 .hud {
   display: flex;
+<<<<<<< codex/create-complete-2d-platformer-web-game-6hnqgd
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -84,14 +112,36 @@ body {
 .sound-btn:hover {
   transform: translateY(-1px);
   filter: brightness(1.08);
+=======
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.hud-item {
+  background: rgba(15, 23, 42, 0.82);
+  border: 1px solid rgba(96, 165, 250, 0.3);
+  border-radius: 999px;
+  padding: 0.5rem 0.9rem;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
+>>>>>>> main
 }
 
 .canvas-wrap {
   position: relative;
+<<<<<<< codex/create-complete-2d-platformer-web-game-6hnqgd
   overflow: hidden;
   border-radius: 18px;
   border: 1px solid rgba(148, 163, 184, 0.28);
   box-shadow: 0 20px 55px rgba(0, 0, 0, 0.45), inset 0 1px rgba(255, 255, 255, 0.08);
+=======
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: #0b1120;
+>>>>>>> main
 }
 
 #gameCanvas {
@@ -99,9 +149,12 @@ body {
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 9;
+<<<<<<< codex/create-complete-2d-platformer-web-game-6hnqgd
   max-height: 68vh;
   background: #0b1120;
   touch-action: none;
+=======
+>>>>>>> main
 }
 
 .overlay {
@@ -112,12 +165,18 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+<<<<<<< codex/create-complete-2d-platformer-web-game-6hnqgd
   gap: 0.9rem;
   padding: 1.2rem;
   color: #f8fbff;
   background:
     radial-gradient(circle at 50% 35%, rgba(126, 199, 255, 0.16), transparent 38%),
     linear-gradient(145deg, rgba(2, 6, 23, 0.9), rgba(15, 23, 42, 0.92));
+=======
+  gap: 0.8rem;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.93), rgba(30, 41, 59, 0.9));
+  padding: 1.2rem;
+>>>>>>> main
 }
 
 .overlay.visible {
@@ -127,19 +186,30 @@ body {
 .overlay h1,
 .overlay h2 {
   margin: 0;
+<<<<<<< codex/create-complete-2d-platformer-web-game-6hnqgd
   font-size: clamp(2rem, 4vw, 3rem);
   text-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+=======
+  color: #f8fafc;
+>>>>>>> main
 }
 
 .overlay p {
   margin: 0;
+<<<<<<< codex/create-complete-2d-platformer-web-game-6hnqgd
   max-width: 640px;
   line-height: 1.52;
   color: #d7e6ff;
+=======
+  max-width: 580px;
+  line-height: 1.45;
+  color: #cbd5e1;
+>>>>>>> main
 }
 
 button {
   border: 0;
+<<<<<<< codex/create-complete-2d-platformer-web-game-6hnqgd
   border-radius: 12px;
   padding: 0.7rem 1.25rem;
   background: linear-gradient(145deg, #38bdf8, #2563eb);
@@ -195,10 +265,26 @@ button {
   height: clamp(74px, 16vw, 102px);
   border-radius: 22px;
   font-size: clamp(1rem, 3vw, 1.2rem);
+=======
+  border-radius: 10px;
+  padding: 0.7rem 1.2rem;
+  background: linear-gradient(135deg, var(--accent), #2563eb);
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.1);
+>>>>>>> main
 }
 
 .help-text {
   text-align: center;
+<<<<<<< codex/create-complete-2d-platformer-web-game-6hnqgd
   color: #cedcff;
   border-radius: 12px;
   border: 1px solid var(--panel-border);
@@ -256,5 +342,26 @@ button {
 
   .move-pad {
     gap: 0.5rem;
+=======
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 12px;
+  padding: 0.65rem 0.8rem;
+}
+
+@media (max-width: 700px) {
+  .hud {
+    justify-content: center;
+  }
+
+  .hud-item {
+    font-size: 0.92rem;
+  }
+
+  .help-text {
+    font-size: 0.85rem;
+>>>>>>> main
   }
 }
