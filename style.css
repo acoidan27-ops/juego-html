@@ -1,16 +1,51 @@
 :root {
+<<<<<<< codex/create-complete-2d-platformer-web-game-6hnqgd
+  --text: #eaf0ff;
+  --panel: rgba(11, 18, 34, 0.74);
+  --panel-border: rgba(140, 181, 255, 0.26);
+  --accent: #5ec5ff;
+=======
   --bg-dark: #0f172a;
   --bg-mid: #1e293b;
   --accent: #60a5fa;
   --accent-2: #34d399;
   --danger: #f87171;
   --text: #e2e8f0;
+>>>>>>> main
 }
 
 * {
   box-sizing: border-box;
 }
 
+<<<<<<< codex/create-complete-2d-platformer-web-game-6hnqgd
+html,
+body {
+  touch-action: none;
+  overscroll-behavior: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 20% 15%, rgba(97, 184, 255, 0.25), transparent 35%),
+    radial-gradient(circle at 80% 20%, rgba(212, 120, 255, 0.18), transparent 28%),
+    linear-gradient(145deg, #030712 0%, #0f172a 55%, #111827 100%);
+  display: grid;
+  place-items: center;
+  padding: clamp(0.3rem, 1.4vw, 0.8rem);
+}
+
+.game-shell {
+  width: min(1120px, 100%);
+  display: grid;
+  gap: 0.7rem;
+=======
 body {
   margin: 0;
   min-height: 100vh;
@@ -26,10 +61,58 @@ body {
   width: min(1100px, 100%);
   display: grid;
   gap: 0.8rem;
+>>>>>>> main
 }
 
 .hud {
   display: flex;
+<<<<<<< codex/create-complete-2d-platformer-web-game-6hnqgd
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  padding: 0.55rem;
+  border-radius: 14px;
+  border: 1px solid var(--panel-border);
+  background: rgba(2, 6, 23, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.hud-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: linear-gradient(160deg, rgba(30, 41, 59, 0.85), rgba(15, 23, 42, 0.84));
+  border: 1px solid rgba(116, 179, 255, 0.28);
+  border-radius: 999px;
+  padding: 0.45rem 0.78rem;
+  font-weight: 700;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.12), 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.hud-label {
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #93c5fd;
+}
+
+.sound-btn {
+  border: 1px solid rgba(94, 197, 255, 0.4);
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  background: linear-gradient(140deg, rgba(14, 116, 144, 0.8), rgba(30, 64, 175, 0.8));
+  color: #f8fbff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.2s ease;
+  touch-action: none;
+}
+
+.sound-btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.08);
+=======
   justify-content: space-between;
   gap: 0.75rem;
   flex-wrap: wrap;
@@ -42,15 +125,23 @@ body {
   padding: 0.5rem 0.9rem;
   font-weight: 600;
   backdrop-filter: blur(4px);
+>>>>>>> main
 }
 
 .canvas-wrap {
   position: relative;
+<<<<<<< codex/create-complete-2d-platformer-web-game-6hnqgd
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.45), inset 0 1px rgba(255, 255, 255, 0.08);
+=======
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
   border: 1px solid rgba(148, 163, 184, 0.2);
   background: #0b1120;
+>>>>>>> main
 }
 
 #gameCanvas {
@@ -58,6 +149,12 @@ body {
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 9;
+<<<<<<< codex/create-complete-2d-platformer-web-game-6hnqgd
+  max-height: 68vh;
+  background: #0b1120;
+  touch-action: none;
+=======
+>>>>>>> main
 }
 
 .overlay {
@@ -68,9 +165,18 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+<<<<<<< codex/create-complete-2d-platformer-web-game-6hnqgd
+  gap: 0.9rem;
+  padding: 1.2rem;
+  color: #f8fbff;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(126, 199, 255, 0.16), transparent 38%),
+    linear-gradient(145deg, rgba(2, 6, 23, 0.9), rgba(15, 23, 42, 0.92));
+=======
   gap: 0.8rem;
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.93), rgba(30, 41, 59, 0.9));
   padding: 1.2rem;
+>>>>>>> main
 }
 
 .overlay.visible {
@@ -80,18 +186,86 @@ body {
 .overlay h1,
 .overlay h2 {
   margin: 0;
+<<<<<<< codex/create-complete-2d-platformer-web-game-6hnqgd
+  font-size: clamp(2rem, 4vw, 3rem);
+  text-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+=======
   color: #f8fafc;
+>>>>>>> main
 }
 
 .overlay p {
   margin: 0;
+<<<<<<< codex/create-complete-2d-platformer-web-game-6hnqgd
+  max-width: 640px;
+  line-height: 1.52;
+  color: #d7e6ff;
+=======
   max-width: 580px;
   line-height: 1.45;
   color: #cbd5e1;
+>>>>>>> main
 }
 
 button {
   border: 0;
+<<<<<<< codex/create-complete-2d-platformer-web-game-6hnqgd
+  border-radius: 12px;
+  padding: 0.7rem 1.25rem;
+  background: linear-gradient(145deg, #38bdf8, #2563eb);
+  color: #f8fcff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+}
+
+.touch-controls {
+  display: none;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.2rem 0.1rem max(0.3rem, env(safe-area-inset-bottom));
+}
+
+.move-pad {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.touch-btn {
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+  border: 1px solid rgba(122, 201, 255, 0.5);
+  background: linear-gradient(160deg, rgba(37, 99, 235, 0.95), rgba(30, 64, 175, 0.95));
+  color: #f8fbff;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 8px 18px rgba(0, 0, 0, 0.35);
+}
+
+.touch-btn:active,
+.touch-btn.active {
+  transform: scale(0.96);
+  filter: brightness(1.15);
+}
+
+.touch-move {
+  width: clamp(72px, 15vw, 94px);
+  height: clamp(72px, 15vw, 94px);
+  border-radius: 20px;
+  font-size: clamp(1.5rem, 4vw, 1.9rem);
+}
+
+.touch-jump {
+  width: clamp(148px, 34vw, 220px);
+  height: clamp(74px, 16vw, 102px);
+  border-radius: 22px;
+  font-size: clamp(1rem, 3vw, 1.2rem);
+=======
   border-radius: 10px;
   padding: 0.7rem 1.2rem;
   background: linear-gradient(135deg, var(--accent), #2563eb);
@@ -105,10 +279,70 @@ button {
 button:hover {
   transform: translateY(-1px);
   filter: brightness(1.1);
+>>>>>>> main
 }
 
 .help-text {
   text-align: center;
+<<<<<<< codex/create-complete-2d-platformer-web-game-6hnqgd
+  color: #cedcff;
+  border-radius: 12px;
+  border: 1px solid var(--panel-border);
+  background: var(--panel);
+  padding: 0.62rem 0.8rem;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 900px), (pointer: coarse) {
+  body {
+    place-items: start center;
+  }
+
+  .game-shell {
+    gap: 0.45rem;
+  }
+
+  .touch-controls {
+    display: flex;
+  }
+
+  .help-text {
+    display: none;
+  }
+
+  .hud {
+    gap: 0.38rem;
+    padding: 0.42rem;
+  }
+
+  .hud-item,
+  .sound-btn {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.6rem;
+  }
+
+  .hud-label {
+    font-size: 0.66rem;
+  }
+
+  #gameCanvas {
+    max-height: 58vh;
+  }
+}
+
+@media (max-width: 460px) {
+  #gameCanvas {
+    max-height: 52vh;
+  }
+
+  .touch-controls {
+    padding-top: 0;
+    gap: 0.6rem;
+  }
+
+  .move-pad {
+    gap: 0.5rem;
+=======
   color: #cbd5e1;
   font-size: 0.95rem;
   background: rgba(15, 23, 42, 0.7);
@@ -128,5 +362,6 @@ button:hover {
 
   .help-text {
     font-size: 0.85rem;
+>>>>>>> main
   }
 }

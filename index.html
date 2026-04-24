@@ -2,16 +2,21 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
     <title>Skybound Quest</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main class="game-shell">
       <header class="hud">
-        <div class="hud-item">Nivel: <span id="levelDisplay">1</span>/3</div>
-        <div class="hud-item">Puntuación: <span id="scoreDisplay">0</span></div>
-        <div class="hud-item">Vidas: <span id="livesDisplay">3</span></div>
+        <div class="hud-item"><span class="hud-label">Nivel</span><span id="levelDisplay">1</span>/3</div>
+        <div class="hud-item"><span class="hud-label">Puntos</span><span id="scoreDisplay">0</span></div>
+        <div class="hud-item"><span class="hud-label">Vidas</span><span id="livesDisplay">3</span></div>
+        <div class="hud-item"><span class="hud-label">Cristales</span><span id="crystalDisplay">0</span></div>
+        <button id="soundToggle" class="sound-btn" type="button" aria-pressed="true">🔊 Sonido ON</button>
       </header>
 
       <section class="canvas-wrap" aria-label="Juego de plataformas 2D">
@@ -20,11 +25,11 @@
         <div id="startScreen" class="overlay visible">
           <h1>Skybound Quest</h1>
           <p>
-            Aventura de plataformas 2D original.<br />
-            Recolecta cristales, esquiva criaturas y alcanza la meta.
+            Explora tres biomas, recoge cristales y vence criaturas del vacío.
+            Todo el arte y sonido se genera en tiempo real.
           </p>
           <button id="startButton">Comenzar partida</button>
-          <small>También puedes pulsar Enter</small>
+          <small>Enter para iniciar · R para reiniciar nivel</small>
         </div>
 
         <div id="gameOverScreen" class="overlay" aria-hidden="true">
@@ -43,9 +48,16 @@
         </div>
       </section>
 
+      <section class="touch-controls" aria-label="Controles táctiles para móvil">
+        <div class="move-pad">
+          <button id="touchLeft" class="touch-btn touch-move" type="button" aria-label="Mover izquierda">◀</button>
+          <button id="touchRight" class="touch-btn touch-move" type="button" aria-label="Mover derecha">▶</button>
+        </div>
+        <button id="touchJump" class="touch-btn touch-jump" type="button" aria-label="Saltar">⤒ SALTAR</button>
+      </section>
+
       <footer class="help-text">
-        Controles: ←/A y →/D para moverte · Espacio/W para saltar · R para
-        reiniciar nivel.
+        Controles: ←/A y →/D para moverte · Espacio/W para saltar · R para reiniciar nivel.
       </footer>
     </main>
 
