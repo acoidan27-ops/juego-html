@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skybound Quest</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="hud">
+        <div class="hud-item">Nivel: <span id="levelDisplay">1</span>/3</div>
+        <div class="hud-item">Puntuación: <span id="scoreDisplay">0</span></div>
+        <div class="hud-item">Vidas: <span id="livesDisplay">3</span></div>
+      </header>
+
+      <section class="canvas-wrap" aria-label="Juego de plataformas 2D">
+        <canvas id="gameCanvas" width="960" height="540"></canvas>
+
+        <div id="startScreen" class="overlay visible">
+          <h1>Skybound Quest</h1>
+          <p>
+            Aventura de plataformas 2D original.<br />
+            Recolecta cristales, esquiva criaturas y alcanza la meta.
+          </p>
+          <button id="startButton">Comenzar partida</button>
+          <small>También puedes pulsar Enter</small>
+        </div>
+
+        <div id="gameOverScreen" class="overlay" aria-hidden="true">
+          <h2>Game Over</h2>
+          <p>Tu puntuación final fue: <strong id="finalScore">0</strong></p>
+          <button id="retryButton">Volver a intentar</button>
+        </div>
+
+        <div id="victoryScreen" class="overlay" aria-hidden="true">
+          <h2>¡Victoria!</h2>
+          <p>
+            Has superado los 3 niveles con una puntuación de
+            <strong id="victoryScore">0</strong> puntos.
+          </p>
+          <button id="playAgainButton">Jugar de nuevo</button>
+        </div>
+      </section>
+
+      <footer class="help-text">
+        Controles: ←/A y →/D para moverte · Espacio/W para saltar · R para
+        reiniciar nivel.
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
